@@ -5,8 +5,8 @@
         string="Stock"
         model="product.template"
         report_type="qweb-pdf"
-        name="print_stock.report_stock_menu"
-        file="print_stock.report_stock_menu"/>
+        name="stock_printer.report_stock_menu"
+        file="stock_printer.report_stock_menu"/>
 
 
       <template id="report_stock_menu">
@@ -27,7 +27,7 @@
                       </thead>
                       <tbody>
                     <t t-foreach="docs" t-as="template">
-                      <t t-call="print_stock.report_stock">
+                      <t t-call="stock_printer.report_stock">
                         <t t-set="product_list" t-value="template.product_variant_ids"/>
                       </t>
                   </t>
